@@ -113,4 +113,28 @@ for(var i=1; i<=100; i++){
     else console.log(i);
 }
 
+//Find longest word in a string
+var longStr="Hello my name is LexiBrooklyn";
+var arr= longStr.split(' ');
+var maxLength=0;
+var longestWord='';
+for(var i=0; i<arr.length; i++){
+    if(arr[i].length>maxLength){
+        maxLength=arr[i].length;
+        longestWord=arr[i];
+    }
+}
+console.log(longestWord);
 
+//Chunk an array
+function chunkArr(arr, len){
+    var i=0;
+    chunkedArr=[];
+    while(i<arr.length){
+    chunkedArr.push(arr.slice(i, i+len));
+    i+=len;
+}
+return chunkedArr;
+}
+var output= chunkArr([1,2,3,4,5,6,7], 3);
+console.log(output);
